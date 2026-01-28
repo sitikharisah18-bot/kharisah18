@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertanian Nusantara</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <nav>
+            <div class="logo">Tani<span>KU</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home">
+    <div class="hero-content">
+        <h1>Pertanian Nusantara</h1>
+        <p>Mewujudkan pertanian berkelanjutan untuk masa depan Indonesia</p>
+        <a href="#produk" class="btn">Lihat Produk</a>
+    </div>
+</section>
+
+<section id="about" class="section-padding">
+    <div class="container about-grid">
+        <div>
+            <h2>Tentang Kami</h2>
+            <p>
+                Kami bergerak di bidang pertanian modern dengan mengutamakan
+                kualitas hasil tani, kelestarian lingkungan, dan kesejahteraan petani lokal.
+            </p>
+        </div>
+        <div>
+            <img src="img/hero-pertanian.jpg" alt="Pertanian" style="width:100%;border-radius:15px;">
+        </div>
+    </div>
+</section>
+
+<section id="produk" class="section-padding">
+    <div class="container">
+        <h2 style="text-align:center;">Produk Unggulan</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-info">
+                    <h3>Beras Organik</h3>
+                    <p>Beras sehat tanpa bahan kimia</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-info">
+                    <h3>Sayuran Segar</h3>
+                    <p>Dipanen langsung dari kebun</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-info">
+                    <h3>Jagung Manis</h3>
+                    <p>Manis alami dan bergizi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-padding">
+    <div class="container">
+        <h2 style="text-align:center;">Hubungi Kami</h2>
+
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+
+            <input type="text" name="name" placeholder="Nama" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Pesan"></textarea>
+
+            <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Pertanian Nusantara</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

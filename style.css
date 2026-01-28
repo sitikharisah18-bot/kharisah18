@@ -1,9 +1,7 @@
 :root {
     --primary: #2e7d32;
-    --primary-light: #e8f5e9;
     --dark: #1b1b1b;
     --light: #ffffff;
-    --text: #333;
 }
 
 * {
@@ -14,17 +12,16 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    color: var(--text);
-    background: var(--light);
 }
 
+/* CONTAINER */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
     position: fixed;
     width: 100%;
@@ -35,19 +32,18 @@ header {
 }
 
 header.scrolled {
-    background: var(--light);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 0;
 }
 
 .logo {
-    font-weight: 700;
+    font-weight: bold;
     font-size: 22px;
 }
 
@@ -63,14 +59,13 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: 600;
 }
 
 header.scrolled .nav-links a {
-    color: var(--text);
+    color: #333;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 #home {
     height: 100vh;
     background:
@@ -85,80 +80,65 @@ header.scrolled .nav-links a {
 
 .hero-content h1 {
     font-size: 48px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.hero-content p {
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 25px;
-}
-
-/* ================= BUTTON ================= */
 .btn {
-    background: var(--light);
-    color: var(--primary);
-    padding: 12px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.btn:hover {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
     background: var(--primary);
     color: white;
+    border-radius: 30px;
+    text-decoration: none;
 }
 
-/* ================= SECTION ================= */
+/* SECTION */
 .section-padding {
     padding: 100px 0;
 }
 
-section:nth-child(even) {
-    background: var(--primary-light);
-}
-
-/* ================= ABOUT ================= */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: center;
 }
 
-/* ================= PRODUCT ================= */
+/* PRODUCT */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
 .product-card {
     background: white;
+    padding: 30px;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.product-card:hover {
-    transform: translateY(-6px);
+/* CONTACT */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.product-info {
-    padding: 20px;
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
-.product-info h3 {
-    color: var(--primary);
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
-    background: var(--primary);
-    color: white;
+    background: #111;
+    color: #ccc;
     text-align: center;
-    padding: 25px;
+    padding: 20px;
 }
