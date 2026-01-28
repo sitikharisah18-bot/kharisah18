@@ -1,0 +1,164 @@
+:root {
+    --primary: #2e7d32;
+    --primary-light: #e8f5e9;
+    --dark: #1b1b1b;
+    --light: #ffffff;
+    --text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    background: var(--light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: transparent;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: var(--light);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header.scrolled .nav-links a {
+    color: var(--text);
+}
+
+/* ================= HERO ================= */
+#home {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(46,125,50,0.65), rgba(46,125,50,0.65)),
+        url("../img/hero-pertanian.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    background: var(--light);
+    color: var(--primary);
+    padding: 12px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ================= SECTION ================= */
+.section-padding {
+    padding: 100px 0;
+}
+
+section:nth-child(even) {
+    background: var(--primary-light);
+}
+
+/* ================= ABOUT ================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ================= PRODUCT ================= */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: var(--primary);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
